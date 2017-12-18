@@ -70,10 +70,10 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "xueshu.io",
+        href: "http://http://linkick.com/"
     },{
-        title: "简书·BY",
+        title: "简书",
         href: "http://www.jianshu.com/u/"
     }
 ]
