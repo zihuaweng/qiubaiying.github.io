@@ -26,6 +26,13 @@ github_username:    zihuaweng
 #twitter_username:   qiubaiying
 
 
+# for markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# highlight codes
+# highlight: true
 
 
 # Build settings
