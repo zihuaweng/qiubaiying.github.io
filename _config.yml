@@ -30,6 +30,7 @@ github_username:    zihuaweng
 markdown: kramdown
 kramdown:
   input: GFM
+  use_coderay: true
 
 # highlight codes
 # highlight: true
