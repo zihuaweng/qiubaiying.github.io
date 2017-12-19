@@ -48,8 +48,6 @@ anchorjs: true                          # if you want to customize anchor. check
 # from PR#40, to support local preview for Je
 # Gems
 gems: [jekyll-paginate]
-paginate: 5
-paginate_path: "page:num"
 
 
 # Analytics settings
