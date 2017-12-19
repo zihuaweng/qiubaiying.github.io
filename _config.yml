@@ -28,6 +28,7 @@ github_username:    zihuaweng
 
 # for markdown
 markdown: kramdown
+mathjax: true
 kramdown:
   input: GFM
   use_coderay: true
