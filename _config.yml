@@ -58,8 +58,8 @@ anchorjs: true                          # if you want to customize anchor. check
 ba_track_id: 883e2f41b03c4d1d375cea18d8966dcb
 
 # Google Analytics
-# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: auto
+ga_track_id: 'UA-111549663-1'            # Format: UA-xxxxxx-xx
+ga_domain: auto
 
 
 # 评论系统
