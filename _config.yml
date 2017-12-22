@@ -74,7 +74,7 @@ gitalk:
   repo: zihuaweng.github.io    #仓库名称
   owner: zihuaweng    #github用户名
   admin: zihuaweng
-distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
 # Featured Tags
