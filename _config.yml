@@ -49,7 +49,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # Gems
 # from PR#40, to support local preview for Je
 # Gems
-gems: [jekyll-paginate]
+# gems: [jekyll-paginate]
 
 
 # Analytics settings
@@ -86,3 +86,6 @@ friends: [
         href: "http://www.jianshu.com/u/"
     }
 ]
+
+
+port: 4001
