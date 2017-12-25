@@ -42,6 +42,10 @@ Uniform， Gaussian， SlidingWindow， Superpixels
 ## 评价一：算法结果复现的鲁棒性repeatability
 这里作者提出这样的假设：一个好的OP方法应该具有比较好的复现能力，对相似的图片提取结果具有一致性的。验证的方法是对PASCAL的图片做了各种扰动（如下图），然后看还能检测出来相同的object的recall是多少，根据IoU的严格与否能够得到一条曲线，最后计算曲线下面积得到repeatability。
 ## 评价二：算法结果recall
+这里有三种评价方式：
+1. 固定proposal数量，根据不同IoU值计算recall
+2. 固定IoU阈值，根据不同的proposal数量计算recall
+3. 文中新定义的average recall (AR)，根据在IoU为0.5-1之间proposal数量计算recall
 ## 评价三：算法结果detection 效果
 
 
