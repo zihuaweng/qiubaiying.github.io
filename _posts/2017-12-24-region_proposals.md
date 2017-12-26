@@ -1,14 +1,14 @@
 ---
 layout:     post
-title:      多种regoin_proposal比较
+title:      多种region_proposal算法比较
 subtitle:   
 date:       2017-12-24
 author:     zihuaweng
-header-img: 
+header-img: post_bg_region.jpg
 catalog: true
 tags:
     - Object_detection
-    - regoin_proposal
+    - region_proposal
     - 论文笔记
 ---
 
@@ -29,12 +29,12 @@ ShapeSharing， Multibox（神经网络学习）
 4. 对比的baseline方法：
 Uniform， Gaussian， SlidingWindow， Superpixels
 
-![comparison](http://zihuaweng.github.io/post_images/regoin_proposal/comparison.png)
+![comparison](http://zihuaweng.github.io/post_images/region_proposal/comparison.png)
 
 ### 其中一些算法介绍：
 1. SelectiveSearch: 通过合并superpixels生成候选框。需要自定义特征和合并条件。目前RCNN系列都采用了这种方式。
     - 解释以下superpixels，superpixels可以理解为将一张图片分割成比像素更大的一个个小块。例如下面的这张图片分割，图c是将原图a分割成200个superpixels结果：
-    ![superpixels](http://zihuaweng.github.io/post_images/regoin_proposal/superpixels.png)
+    ![superpixels](http://zihuaweng.github.io/post_images/region_proposal/superpixels.png)
 2. Objectness： 较早的一种proposal方法。是根据图像中比较突出的位置选择一些初始框，然后根据选中区域的颜色，边缘，位置，大小等特征打分。
 3. Bing: 训练了一个简单的线性分类器来通过类似滑窗的方式来过滤候选框，速度惊人地快，在CPU上能够达到ms级别。
 4. EdgeBoxes： 不需要学习参数，结合滑窗，通过计算窗口内边缘个数进行打分，最后排序。
@@ -46,7 +46,7 @@ multiple graph cut segmentations,
    
 ## 评价一：结果复现的鲁棒性repeatability
 好算法应该有比较好的复现能力，对相似的图片提取结果具有一致性的。验证的方法是对PASCAL的图片做了各种扰动（如下图），然后看还能检测出来相同的object的recall是多少，根据IoU的严格与否能够得到一条曲线，最后计算曲线下面积得到repeatability。
-！[扰动效果]()
+！[扰动效果](http://zihuaweng.github.io/post_images/region_proposal/change_image.png)
 ## 评价二：是否会漏检recall
 这里有三种评价方式：
 1. 固定proposal数量，根据不同IoU值计算recall
@@ -57,26 +57,21 @@ multiple graph cut segmentations,
         - MCG在各种proposal下表现最好
         - proposal小于1000时，endres和CPMC效果都比较好
         - proposal大于1000时，Rigor和SelectiveSearch表现更好
-！[recall效果]()
+！[recall效果](http://zihuaweng.github.io/post_images/region_proposal/ap_result.png)
 ## 评价三：用于物体检测时效果
 1. 检验算法在物体检查中的效果 
 使用各种算法得到1000个proposal然后用DPM（LM-LLDA）和RCNN和FastRCNN的物体检测效果评价算法
 - 从下面结果看出，IoU越大，物体检测效果越好，所以提高定位能够提高最终效果。
-![IoU效果]()
+![IoU效果](http://zihuaweng.github.io/post_images/region_proposal/iou_gt.png)
 - 在LM-LLDA和RCNN中表现最好的前五个比较类似，都有MCG,SelectiveSearch,Rigor
-![LM-LLDA和RCNN效果]()
+![LM-LLDA和RCNN效果](http://zihuaweng.github.io/post_images/region_proposal/detection_result.png)
 2. 验证了AR和mAP相关后可以用AR结果对proposal算法进行微调。
 结合AR结果，为EdgeBoxes选择更好的参数可以在物体检测中得到1.6个点的提升
-
+![detection提升](http://zihuaweng.github.io/post_images/region_proposal/edgeboxes.png)
 ## 最后结论
 1. 目前为止repeatability不是评价proposal方法的一个重要指标，因为表现好的算法例如Bing在后面的检测效果中并不如repeatability表现的差的SelectiveSearch和EdgeBoxes。
 2. 定位越准（IoU越大）的proposal方法在物体检测中效果越好。所以不是IoU0.5效果就会好。
 3. SelectiveSearch,Rigor,MCG和EdgeBoxes在物体检测表现更好,而且各自的效果差不多。其中EdgeBoxes在速度和结果上表现都不错。
-
-
-
-
-
 
 ## Reference
 [What makes for effective detection proposals?](https://arxiv.org/abs/1502.05082)
