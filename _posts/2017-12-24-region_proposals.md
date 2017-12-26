@@ -4,7 +4,7 @@ title:      多种region_proposal算法比较
 subtitle:   
 date:       2017-12-24
 author:     zihuaweng
-header-img: post_bg_region.jpg
+header-img: img/post_bg_region.png
 catalog: true
 tags:
     - Object_detection
@@ -46,7 +46,9 @@ multiple graph cut segmentations,
    
 ## 评价一：结果复现的鲁棒性repeatability
 好算法应该有比较好的复现能力，对相似的图片提取结果具有一致性的。验证的方法是对PASCAL的图片做了各种扰动（如下图），然后看还能检测出来相同的object的recall是多少，根据IoU的严格与否能够得到一条曲线，最后计算曲线下面积得到repeatability。
-！[扰动效果](http://zihuaweng.github.io/post_images/region_proposal/change_image.png)
+
+![扰动效果](http://zihuaweng.github.io/post_images/region_proposal/change_image.png)
+
 ## 评价二：是否会漏检recall
 这里有三种评价方式：
 1. 固定proposal数量，根据不同IoU值计算recall
@@ -57,7 +59,9 @@ multiple graph cut segmentations,
         - MCG在各种proposal下表现最好
         - proposal小于1000时，endres和CPMC效果都比较好
         - proposal大于1000时，Rigor和SelectiveSearch表现更好
-！[recall效果](http://zihuaweng.github.io/post_images/region_proposal/ap_result.png)
+
+![recall效果](http://zihuaweng.github.io/post_images/region_proposal/ap_result.png)
+
 ## 评价三：用于物体检测时效果
 1. 检验算法在物体检查中的效果 
 使用各种算法得到1000个proposal然后用DPM（LM-LLDA）和RCNN和FastRCNN的物体检测效果评价算法
@@ -74,8 +78,8 @@ multiple graph cut segmentations,
 3. SelectiveSearch,Rigor,MCG和EdgeBoxes在物体检测表现更好,而且各自的效果差不多。其中EdgeBoxes在速度和结果上表现都不错。
 
 ## Reference
-[What makes for effective detection proposals?](https://arxiv.org/abs/1502.05082)
-[superpixels](http://ttic.uchicago.edu/~xren/research/superpixel)
-[BING: Binarized Normed Gradients for Objectness Estimation at 300fps](http://ieeexplore.ieee.org/document/6909816/)
-blog.csdn.net/baobei0112/article/details/47950963
+1. [What makes for effective detection proposals?](https://arxiv.org/abs/1502.05082)
+2. [superpixels](http://ttic.uchicago.edu/~xren/research/superpixel)
+3. [BING: Binarized Normed Gradients for Objectness Estimation at 300fps](http://ieeexplore.ieee.org/document/6909816/)
+4. blog.csdn.net/baobei0112/article/details/47950963
 
