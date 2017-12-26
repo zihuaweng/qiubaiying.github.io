@@ -14,10 +14,11 @@ tags:
 
 ## 概况
 物体检测通常的做法是选出一定数目的候选框，然后针对候选框做图像识别。候选框的选择有以下几种算法：
-sideing window 滑窗：传统做法是设定一些框，在图片上不断滑动，得到候选窗，所以一张图片有可能选出的候选框达\\( 10^4-10^7 \\)个之多。
-detection proposals：由于滑窗的计算量很大，就有了detection proposals这一类算法，一般认为可能为物体的区域与背景有明显的特征差异，我们尽可能选出可能是物体的那些框的
+- sideing window 滑窗：传统做法是设定一些框，在图片上不断滑动，得到候选窗，所以一张图片有可能选出的候选框达\\( 10^4-10^7 \\)个之多。
+- detection proposals：由于滑窗的计算量很大，就有了detection proposals这一类算法，一般认为可能为物体的区域与背景有明显的特征差异，我们尽可能选出可能是物体的那些框的
 
-## detection proposals分类 (文中只考虑有开源代码的方法)
+## detection proposals分类 
+(文中只考虑有开源代码的方法)
 1. Grouping proposal methods: 将图片分割成小块然后聚合多个可能含有物体的候选区域。根据生成候选区域的方法，可以分成三类： 
 - grouping superpixels (SP， 聚合superpixels): **SelectiveSearch**, RandomizedPrim’s, Rantalankila, Chang, 
 - graph cut (GC，使用不同种子然后graph cut): CPMC, Endres, Rigor
@@ -76,6 +77,9 @@ multiple graph cut segmentations,
 1. 目前为止repeatability不是评价proposal方法的一个重要指标，因为表现好的算法例如Bing在后面的检测效果中并不如repeatability表现的差的SelectiveSearch和EdgeBoxes。
 2. 定位越准（IoU越大）的proposal方法在物体检测中效果越好。所以不是IoU0.5效果就会好。
 3. SelectiveSearch,Rigor,MCG和EdgeBoxes在物体检测表现更好,而且各自的效果差不多。其中EdgeBoxes在速度和结果上表现都不错。
+
+
+#### 总结完我打算再接下来的项目中用用SelectiveSearch和EdgeBoxes，还有Faster RCNN里面的archer方法，下回继续。
 
 ## Reference
 1. [What makes for effective detection proposals?](https://arxiv.org/abs/1502.05082)
