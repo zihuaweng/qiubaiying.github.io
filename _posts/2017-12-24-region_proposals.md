@@ -17,7 +17,8 @@ tags:
 sideing window 滑窗：传统做法是设定一些框，在图片上不断滑动，得到候选窗，所以一张图片有可能选出的候选框达\\( 10^4-10^7 \\)个之多。
 detection proposals：由于滑窗的计算量很大，就有了detection proposals这一类算法，一般认为可能为物体的区域与背景有明显的特征差异，我们尽可能选出可能是物体的那些框的
 
-## detection proposals分类 (文中只考虑有开源代码的方法)
+## detection proposals分类 
+(文中只考虑有开源代码的方法)
 1. Grouping proposal methods: 将图片分割成小块然后聚合多个可能含有物体的候选区域。根据生成候选区域的方法，可以分成三类： 
 - grouping superpixels (SP， 聚合superpixels): **SelectiveSearch**, RandomizedPrim’s, Rantalankila, Chang, 
 - graph cut (GC，使用不同种子然后graph cut): CPMC, Endres, Rigor
