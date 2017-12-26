@@ -78,6 +78,9 @@ multiple graph cut segmentations,
 2. 定位越准（IoU越大）的proposal方法在物体检测中效果越好。所以不是IoU0.5效果就会好。
 3. SelectiveSearch,Rigor,MCG和EdgeBoxes在物体检测表现更好,而且各自的效果差不多。其中EdgeBoxes在速度和结果上表现都不错。
 
+
+#### 总结完我打算再接下来的项目中用用SelectiveSearch和EdgeBoxes，还有Faster RCNN里面的archer方法，下回继续。
+
 ## Reference
 1. [What makes for effective detection proposals?](https://arxiv.org/abs/1502.05082)
 2. [superpixels](http://ttic.uchicago.edu/~xren/research/superpixel)
