@@ -4,7 +4,7 @@ title:      多种region_proposal算法比较
 subtitle:   
 date:       2017-12-24
 author:     zihuaweng
-header-img: img/post_bg_region.jpg
+header-img: img/post_bg_region.png
 catalog: true
 tags:
     - Object_detection
