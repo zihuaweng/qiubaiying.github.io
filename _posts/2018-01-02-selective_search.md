@@ -35,13 +35,18 @@ tags:
 hierarchical grouping + Bottom-up grouping （打散成小块后自下而上的合并）
 1. 首先将图片切割成一个个小快作为初始区域[2]，这样每一块不仅含有的信息比较多，而且不太可能跨度多个物体。
 2. 用一个贪婪算法将这些小块组合起来：
-	- 计算相邻小块的相似度，两个最相似的小块合并，接着计算组合后的所有小块之间的相似度，重复操作直到所有小块合并成原始图片 
+	- 计算相邻小块的相似度，两个最相似的小块合并，接着计算组合后的所有小块之间的相似度，重复操作直到所有小块合并成原始图片
+![hierarchical](http://zihuaweng.github.io/post_images/selective_search/hierarchical.png)
 
 ### Diversification Strategies （合并策略）
 使用以下三种不同方式聚合元素
-- 不同色彩空间： 包含各种一定程度的不变属性的色彩空间
+- 不同色彩空间： 包含各种一定程度的不变属性的色彩空间,RGB,HSV等
 - 不同计算相似度方法： 整合：颜色相似度\\( s_color \\)（直方图）， 纹理相似度\\( s_texture \\)（fast SIFT-like， 纹理直方图）， 面积\\( s_size \\) (面积较小的小块优先聚合：相似大小的小块聚合，这样聚合会在图片的各个局部发生)，匹配\\( s_fill \\) (有重合部分的小块优先合并)四种相似度计算方法。（具体的计算公式可以参考selectivesearch的文章）
 \\[ s = a_1s_color + a_2s_texture + a_3s_size + a_4s_fill \\]
+
+### 最后结果
+![result_1](http://zihuaweng.github.io/post_images/selective_search/result_1.png)
+![result_2](http://zihuaweng.github.io/post_images/selective_search/result_2.png)
 
 ## 代码实现
 python有一个selectivesearch 的库可以直接使用，这里使用opencv实现，主要是笔者用自己的数据测试后opencv的实现效果比较好，主要是速度更快。
@@ -136,8 +141,9 @@ if __name__ == '__main__':
     # close image show window
     cv2.destroyAllWindows()
 ~~~~~
-其中ss = cv2.ximgproc.segmentation.createSelectiveSearchSegmentation()可以根据需求设置适合的k, segma。具体参考[opencv](https://docs.opencv.org/trunk/d6/d6d/classcv_1_1ximgproc_1_1segmentation_1_1SelectiveSearchSegmentation.html)
+其中ss = cv2.ximgproc.segmentation.createSelectiveSearchSegmentation(), switchToSelectiveSearchQuality(), switchToSelectiveSearchFast()可以根据需求设置适合的k, segma。具体参考[opencv](https://docs.opencv.org/trunk/d6/d6d/classcv_1_1ximgproc_1_1segmentation_1_1SelectiveSearchSegmentation.html#a53c44312781ded2945c4abb1aa650351)
 
+选中图片按m可以查看更多框,l可以查看少一点框,q退出
 
 ## Reference:
 1. [Segmentation as Selective Search for Object Recognition](https://www.koen.me/research/selectivesearch/)
