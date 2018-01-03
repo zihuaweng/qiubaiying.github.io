@@ -53,7 +53,7 @@ hierarchical grouping + Bottom-up grouping （打散成小块后自下而上的�
 
 ### 最后结果
 ![result_1](http://zihuaweng.github.io/post_images/selective_search/result_1.png)
-![result_2](http://zihuaweng.github.io/post_images/selective_search/result_2.png)
+
 
 ## 代码实现
 python有一个selectivesearch 的库可以直接使用，这里使用opencv实现，主要是笔者用自己的数据测试后opencv的实现效果比较好，主要是速度更快。
@@ -151,6 +151,12 @@ if __name__ == '__main__':
 其中ss = cv2.ximgproc.segmentation.createSelectiveSearchSegmentation(), switchToSelectiveSearchQuality(), switchToSelectiveSearchFast()可以根据需求设置适合的k, segma。具体参考[opencv](https://docs.opencv.org/trunk/d6/d6d/classcv_1_1ximgproc_1_1segmentation_1_1SelectiveSearchSegmentation.html#a53c44312781ded2945c4abb1aa650351)
 
 选中图片按m可以查看更多框,l可以查看少一点框,q退出
+结果如下:
+~~~~~ python
+pytohn ssearch.py test_image.jpg f
+~~~~~~
+![result_2](http://zihuaweng.github.io/post_images/selective_search/result_2.png)
+![result_3](http://zihuaweng.github.io/post_images/selective_search/result_3.png)
 
 ## Reference:
 1. [Segmentation as Selective Search for Object Recognition](https://www.koen.me/research/selectivesearch/)
