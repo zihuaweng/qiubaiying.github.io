@@ -43,8 +43,8 @@ hierarchical grouping + Bottom-up grouping （打散成小块后自下而上的�
 ### Diversification Strategies （合并策略）
 使用以下三种不同方式聚合元素
 - 不同色彩空间： 包含各种一定程度的不变属性的色彩空间,RGB,HSV等
-- 不同计算相似度方法： 整合：颜色相似度\\( s_color \\)（直方图）， 纹理相似度\\( s_texture \\)（fast SIFT-like， 纹理直方图）， 面积\\( s_size \\) (面积较小的小块优先聚合：相似大小的小块聚合，这样聚合会在图片的各个局部发生)，匹配\\( s_fill \\) (有重合部分的小块优先合并)四种相似度计算方法。（具体的计算公式可以参考selectivesearch的文章）
-\\[ s = a_1s_color + a_2s_texture + a_3s_size + a_4s_fill \\]
+- 不同计算相似度方法： 整合：颜色相似度\\( s_(color) \\)（直方图）， 纹理相似度\\( s_(texture) \\)（fast SIFT-like， 纹理直方图）， 面积\\( s_(size) \\) (面积较小的小块优先聚合：相似大小的小块聚合，这样聚合会在图片的各个局部发生)，匹配\\( s_(fill) \\) (有重合部分的小块优先合并)四种相似度计算方法。（具体的计算公式可以参考selectivesearch的文章）
+\\[ s = a_1s_(color) + a_2s_(texture) + a_3s_(size) + a_4s_(fill) \\]
 
 ### 最后结果
 ![result_1](http://zihuaweng.github.io/post_images/selective_search/result_1.png)
