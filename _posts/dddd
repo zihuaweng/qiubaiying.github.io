@@ -1,0 +1,27 @@
+---
+layout:     post
+title:      损失函数汇总及tensorflow实践
+subtitle:   
+date:       2018-04-01
+author:     zihuaweng
+header-img: img/post_bg_region.png
+catalog: true
+tags:
+    - loss function
+    - tensorflow
+---
+
+## 损失函数
+
+sigmoid和softmax函数的存在是将计算的logit转化为概率（probabilities）
+
+
+
+
+## 代码实现
+
+
+## Reference:
+1. https://stackoverflow.com/questions/47034888/how-to-choose-cross-entropy-loss-in-tensorflow
+2. [Efficient Graph-Based Image Segmentation](http://cs.brown.edu/~pff/segment/)
+3. [Learn Open CV](http://www.learnopencv.com/selective-search-for-object-detection-cpp-python/)
