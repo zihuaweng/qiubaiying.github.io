@@ -34,12 +34,17 @@ faster rcnn结构还是比较复杂的，下面开始解读一下源码：
 
 我们可以获取所有阶段的pt文件看模型结构，重点看以下几个环节：
 RPN训练：
+![rpn_training](http://zihuaweng.github.io/post_images/faster_rcnn/rpn_train.png)
 proposal生成：
+![rpn_training](http://zihuaweng.github.io/post_images/faster_rcnn/rpn_test.png)
 Fast R-CNN训练：
+![rpn_training](http://zihuaweng.github.io/post_images/faster_rcnn/fastrcnn.png)
 Fast R-CNN测试：
+![rpn_training](http://zihuaweng.github.io/post_images/faster_rcnn/faster_test.png)
 
 其中包含了几个重要的layer,下面会展开。
 
+RoIDataLayer, AnchorTargetLayer, ProposalLayer, ProposalTargetLayer, ROIPooing, SmoothL1Loss layer
 
 rpn_cls_prob_reshape =  （1， 2*9， 14， 14）
 前面九个是背景概率，后面就个是前景概率
