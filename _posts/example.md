@@ -11,7 +11,8 @@ tags:
     - tensorflow
 ---
 
-## 
+## image
 
+![comparison](http://zihuaweng.github.io/post_images/region_proposal/comparison.png)
 
 ## Reference:
