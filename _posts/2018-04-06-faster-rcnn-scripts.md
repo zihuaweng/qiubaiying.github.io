@@ -91,13 +91,10 @@ A = anchor数量（9）
 计算损失函数论文使用：
 ![loss_function](http://zihuaweng.github.io/post_images/faster_rcnn/loss_function.jpg)
 
-Lreg(ti, t∗i ) = R(ti − t∗i ), R是smoothl1loss
-
-rpn_bbox_pred  anchor与预测的偏移量 ti
-
-rpn_bbox_targets  anchor与gt的偏差 t*i
-
-rpn_bbox_inside_weights p*i
+- Lreg(ti, t∗i ) = R(ti − t∗i ), R是smoothl1loss
+- rpn_bbox_pred  anchor与预测的偏移量 ti
+- rpn_bbox_targets  anchor与gt的偏差 t*i
+- rpn_bbox_inside_weights p*i
 
 计算smoothl1时，需要乘以rpn_bbox_outside_weights，即w_out * SmoothL1，如果正负样本为1:1，如文章所说，rpn_bbox_outside_weights为1 / num(anchor)，就是1/Nreg。如果正负样本数量差异很大，则应该乘以具体的rpn_bbox_outside_weights，而不是直接1/Nreg。
 
@@ -136,9 +133,9 @@ caffe_gpu_sub(
 3. 两个1x1卷积：
 - rpn_cls_score，shape=(1,18,h,w)，可以理解为9个anchor在每个像素（h,w）对应的原图上是否是物体的概率
 其中：rpn_cls_score会有一系列操作：
-    - rpn_cls_score_reshape(shape=(1,2,9xh,w))，这里的reshape是方便后面softmax计算
-    - rpn_cls_pro = softmax(rpn_cls_score_reshape)
-    - rpn_cls_pro_reshape(shape=(1,18,h,w)), 前面九个是背景概率，后面就个是前景概率,后面计算会用到的是前景概率
+: rpn_cls_score_reshape(shape=(1,2,9xh,w))，这里的reshape是方便后面softmax计算
+: rpn_cls_pro = softmax(rpn_cls_score_reshape)
+: rpn_cls_pro_reshape(shape=(1,18,h,w)), 前面九个是背景概率，后面就个是前景概率,后面计算会用到的是前景概率
 - rpn_bbox_pred，shape=(1,36,h,w)， 可以理解为9个anchor的4个坐标点在每个像素（h,w）对应的原图上的偏差
 4. ProposalLayer结合上面结果生成原图上的object proposals
 
