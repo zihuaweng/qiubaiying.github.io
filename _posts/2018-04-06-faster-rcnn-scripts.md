@@ -131,11 +131,10 @@ caffe_gpu_sub(
 1. vgg提取特征（最后是conv5_3,relu5_3)
 2. rpn_conv(3x3卷积,shape=(1,512,h,w))
 3. 两个1x1卷积：
-- rpn_cls_score，shape=(1,18,h,w)，可以理解为9个anchor在每个像素（h,w）对应的原图上是否是物体的概率
-其中：rpn_cls_score会有一系列操作：
-: rpn_cls_score_reshape(shape=(1,2,9xh,w))，这里的reshape是方便后面softmax计算
-: rpn_cls_pro = softmax(rpn_cls_score_reshape)
-: rpn_cls_pro_reshape(shape=(1,18,h,w)), 前面九个是背景概率，后面就个是前景概率,后面计算会用到的是前景概率
+- rpn_cls_score，shape=(1,18,h,w)，可以理解为9个anchor在每个像素（h,w）对应的原图上是否是物体的概率，包涵下面几个操作
+    > rpn_cls_score_reshape(shape=(1,2,9xh,w))，这里的reshape是方便后面softmax计算
+    > rpn_cls_pro = softmax(rpn_cls_score_reshape)
+    > rpn_cls_pro_reshape(shape=(1,18,h,w)), 前面九个是背景概率，后面就个是前景概率,后面计算会用到的是前景概率
 - rpn_bbox_pred，shape=(1,36,h,w)， 可以理解为9个anchor的4个坐标点在每个像素（h,w）对应的原图上的偏差
 4. ProposalLayer结合上面结果生成原图上的object proposals
 
