@@ -57,6 +57,12 @@ RoIDataLayer, AnchorTargetLayer, ProposalLayer, ProposalTargetLayer, ROIPooing, 
 4. AnchorTargetLayer得到每个anchor对应的label,bbox坐标
 5. 分别计算各自的loss（rpn_loss_cls(SoftmaxWithLoss), rpn_loss_bbox(SmoothL1Loss)）
 
+#### RoIDataLayer：
+RoIDataLayer在RPN训练中返回data，im_info，gt_boxes。
+1. data，含有所有resize后图片array的blob
+2. im_info=(h, w, scale), scale 是最小边resize到600的需要乘的系数=float(target_size) / float(im_size_min)
+3. gt_boxes=(x1, y1, x2, y2, label),具体区域的坐标和分类标签
+
 #### AnchorTargetLayer:
 针对每个anchor生成target和label。分类的label为1（物体），0（非物体），-1（忽略）。如果分类lable>0则进行box regression
 
@@ -90,19 +96,23 @@ A = anchor数量（9）
 #### SmoothL1Loss layer
 计算损失函数论文使用：
 ![loss_function](http://zihuaweng.github.io/post_images/faster_rcnn/loss_function.jpg)
-
+![smoothl1](http://zihuaweng.github.io/post_images/faster_rcnn/smoothl1.png)
+![t*t](http://zihuaweng.github.io/post_images/faster_rcnn/target.png)
 - Lreg(ti, t∗i ) = R(ti − t∗i ), R是smoothl1loss
 - rpn_bbox_pred  anchor与预测的偏移量 ti
 - rpn_bbox_targets  anchor与gt的偏差 t*i
 - rpn_bbox_inside_weights p*i
 
-计算smoothl1时，需要乘以rpn_bbox_outside_weights，即w_out * SmoothL1，如果正负样本为1:1，如文章所说，rpn_bbox_outside_weights为1 / num(anchor)，就是1/Nreg。如果正负样本数量差异很大，则应该乘以具体的rpn_bbox_outside_weights，而不是直接1/Nreg。
+实际的SmoothL1Loss计算和文中提到的有出入。
+先计算w_in * (rpn_bbox_pred - rpn_bbox_targets), 再计算w_out * SmoothL1(w_in * (rpn_bbox_pred - rpn_bbox_targets)), 最后相加除以num总数（乘上1/Nreg）。
+
+所以损失函数中pi*其实是w_out, Lreg里面应该是w_in * (ti - ti\* )，这里的w_in和w_out分别是AnchorTargetLayer得到的bbox_inside_weights和bbox_outside_weights。
 
 ~~~~~c++
 caffe_gpu_sub(
       count,
-      bottom[0]->gpu_data(),
-      bottom[1]->gpu_data(),
+      bottom[0]->gpu_data(),   // bbox_pred
+      bottom[1]->gpu_data(),   // bbox_targets
       diff_.mutable_gpu_data());    // d := b0 - b1
   if (has_weights_) {
     // apply "inside" weights
@@ -124,6 +134,10 @@ caffe_gpu_sub(
         errors_.gpu_data(),
         errors_.mutable_gpu_data());  // d := w_out * SmoothL1(w_in * (b0 - b1))
   }
+  Dtype loss;  
+  caffe_gpu_dot(count, ones_.gpu_data(), errors_.gpu_data(), &loss);  
+  top[0]->mutable_cpu_data()[0] = loss / bottom[0]->num();  
+}  
 ~~~~~
 
 ### RPN test (generate proposals)
@@ -242,6 +256,17 @@ def py_cpu_nms(dets, thresh):
 - bbox_pred,获取84个点（21 × 4个坐标点）
 4. 分别计算loss（loss_cls(SoftmaxWithLoss), loss_bbox(SmoothL1Loss)）
 
+#### RoIDataLayer：
+RoIDataLayer在RPN训练中返回data，im_info，gt_boxes。
+1. data，含有所有resize后图片array的blob
+2. rois=(range(num_rois), x1, y1, x2, y2), 表示原图中roi的数量，4个坐标点
+3. labels=21个对应的分类标签
+4. bbox_targets
+5. bbox_inside_weights
+6. bbox_outside_weights
+
+这部分具体细节以后补充
+  
 #### ROIPooing
 Forward 源码
 首先计算原图rois映射到feature map的坐标，即原始坐标 x spacial_scale(大小为所有stride的乘积分之一)，然后针对pool后每个像素点进行计算，即pool后每个像素点都代表原先的一块区域，这个区域大小为bin_h= roi_height / pooled_ height, bin_w=roi_width / pooled_width。每个像素点的值就是该feature map的区域中最大值，并记录最大值所在的位置。
