@@ -235,10 +235,10 @@ layer {
     ![screenshot from 2017-12-18 15-24-52](https://user-images.githubusercontent.com/13395833/34094306-9c477f2c-e407-11e7-82bb-59191df6c6ee.png)
 
         反推回去，由anchor计算得到一个predict box(proposals), G冒号=预测，P=anchor
-    ~~~python
+            
+~~~~python
     proposals = bbox_transform_inv(anchors, bbox_deltas)
-    
-    
+ 
     def bbox_transform_inv(boxes, deltas):
         if boxes.shape[0] == 0:
             return np.zeros((0, deltas.shape[1]), dtype=deltas.dtype)
@@ -271,7 +271,7 @@ layer {
         pred_boxes[:, 3::4] = pred_ctr_y + 0.5 * pred_h
     
         return pred_boxes
-    ~~~
+~~~~~
 
 2. 第一步已经得到具体的位置了，这一步其实只是把超出图片大小的proposal给裁剪成在图片范围内,更新proposals。
     ~~~python
@@ -456,24 +456,27 @@ void ROIPoolingLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
   }
 }
 ~~~
-得到了pool5后，接着是就是fc6,这一层InnerProduct先把pool5的输出转换成（roi的个数,channel*width*height），然后每个roi进行InnerProduct计算。
+得到了pool5后，接着是就是fc6,这一层InnerProduct先把pool5的输出转换成（roi的个数,channel x width x height），然后每个roi进行InnerProduct计算。
 
 
 ## 补充几个小的点：
 1. anchor 生成：
-    接下来是anchor的窗口尺寸，这个不难理解，三个面积尺寸（128^2，256^2，512^2），然后在每个面积尺寸下，取三种不同的长宽比例（1:1,1:2,2:1）.这样一来，我们得到了一共9种面积尺寸各异的anchor。示意图如下：
+    - 接下来是anchor的窗口尺寸，这个不难理解，三个面积尺寸（128^2，256^2，512^2），然后在每个面积尺寸下，取三种不同的长宽比例（1:1,1:2,2:1）.这样一来，我们得到了一共9种面积尺寸各异的anchor。示意图如下：
 
 1. 为什么vgg16最后一层缩小1/16？（feat_stride为什么是16）
-    vgg16中所有的卷积层都是kenel大小（卷积核大小）为3x3，pad大小为1，stride为1的卷积层。用公式W‘ = (W − F + 2P )/S + 1（W代表未经过卷积的feature map大小，F代表卷积核的大小，P代表pad大小，S代表stride大小）计算可以发现，feature map的大小经过卷积后保持不变。vgg16中的卷积层分为5个阶段，每个阶段后都接一个kenel大小为2x2，stride大小为2x2的max pooling，经过一个max pooling后feature map的大小就缩小1/2，经过5次后就缩小1/32。fast rcnn中使用的vgg16只使用第5个max pooling之前的所有层，所以图像大小只缩小1/16。
+    - vgg16中所有的卷积层都是kenel大小（卷积核大小）为3x3，pad大小为1，stride为1的卷积层。用公式W‘ = (W − F + 2P )/S + 1（W代表未经过卷积的feature map大小，F代表卷积核的大小，P代表pad大小，S代表stride大小）计算可以发现，feature map的大小经过卷积后保持不变。vgg16中的卷积层分为5个阶段，每个阶段后都接一个kenel大小为2x2，stride大小为2x2的max pooling，经过一个max pooling后feature map的大小就缩小1/2，经过5次后就缩小1/32。fast rcnn中使用的vgg16只使用第5个max pooling之前的所有层，所以图像大小只缩小1/16。
 
 2. rpn为什么使用卷积(3 x 3),(1 x 1)卷积？
-    论文里面写的使用n x n 的sliding windows来映射最后一层feature map对应的特征，实际操作是一个3 x 3 convolution。
+    - 论文里面写的使用n x n 的sliding windows来映射最后一层feature map对应的特征，实际操作是一个3 x 3 convolution。相当于为RPN网络单独学习提取特征，使得后面两个1 x 1卷积可以学习到对应的信息。这里的1 x 1卷积主要是为了把channel转变为对应的2 x 9, 4 x 9，这样，针对feature map上面每一个点对应的每一个具体的anchor都能有自己的参数，尤其是box regression，可以更加准确。
     
+3. rpn中，超出图片大小的anchor处理
+    - 训练的时候，忽略超出图片大小的anchor，否则会造成很大的误差，并且很难拟合。测试的时候，生成的anchor如果有超出图片大小的会被裁剪掉。
+
 3. 其他一些可能遇到的问题：
-    https://blog.csdn.net/u010402786/article/details/72675831?locationNum=11&fps=1
+    - https://blog.csdn.net/u010402786/article/details/72675831?locationNum=11&fps=1
 
 4. 一些可以学习的博客：
-    https://blog.csdn.net/u014696921/article/details/60321425
+    - https://blog.csdn.net/u014696921/article/details/60321425
 
 ## Reference:
 https://github.com/rbgirshick/caffe-fast-rcnn

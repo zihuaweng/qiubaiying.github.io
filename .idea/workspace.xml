@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56181e8a-5d4b-4212-9532-6885ff10b056" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/_posts/faster-rcnn-improve.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md" afterPath="$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/faster-rcnn-improve.md" afterPath="$PROJECT_DIR$/_posts/faster-rcnn-improve.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="180">
-                <caret line="472" column="16" lean-forward="false" selection-start-line="472" selection-start-column="16" selection-end-line="472" selection-end-column="16" />
+              <first_editor relative-caret-position="152">
+                <caret line="469" column="29" lean-forward="false" selection-start-line="469" selection-start-column="29" selection-end-line="469" selection-end-column="29" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -32,8 +31,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/faster-rcnn-improve.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="100">
-                <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <first_editor relative-caret-position="63">
+                <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -45,8 +44,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-04-loss.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-231">
-                <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <first_editor relative-caret-position="-105">
+                <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -64,6 +63,8 @@
       <find>比例</find>
       <find>stride</find>
       <find>bbox_targets</find>
+      <find>大小</find>
+      <find>nms</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,10 +80,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="251" />
-    <option name="y" value="511" />
+    <option name="x" value="132" />
+    <option name="y" value="143" />
     <option name="width" value="1855" />
-    <option name="height" value="562" />
+    <option name="height" value="849" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -152,7 +153,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="251" y="511" width="1855" height="562" extended-state="0" />
+    <frame x="132" y="143" width="1855" height="849" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15687332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -272,22 +273,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/faster-rcnn-improve.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2018-04-04-loss.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="100">
-            <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <first_editor relative-caret-position="-105">
+            <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-04-04-loss.md">
+    <entry file="file://$PROJECT_DIR$/_posts/faster-rcnn-improve.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-231">
-            <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <first_editor relative-caret-position="63">
+            <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             <folding />
           </first_editor>
           <second_editor />
@@ -302,8 +303,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="472" column="16" lean-forward="false" selection-start-line="472" selection-start-column="16" selection-end-line="472" selection-end-column="16" />
+          <first_editor relative-caret-position="152">
+            <caret line="469" column="29" lean-forward="false" selection-start-line="469" selection-start-column="29" selection-end-line="469" selection-end-column="29" />
             <folding />
           </first_editor>
           <second_editor />
