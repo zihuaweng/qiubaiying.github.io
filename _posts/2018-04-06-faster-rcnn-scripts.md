@@ -65,8 +65,8 @@ RoIDataLayer在RPN训练中返回data，im_info，gt_boxes。
 
 #### AnchorTargetLayer:
 针对每个anchor生成target和label。分类的label为1（物体），0（非物体），-1（忽略）。如果分类lable>0则进行box regression
+这里生成的anchor就是预测的proposal。
 
-1. Generate proposals from bbox deltas and shifted anchors
 首先得到原有图片大小：rpn_cls_score中feature map × feat_stride（16）
 
 接着得到anchor(9个，包含了三种大小，尺寸的组合)对应原图中bbox，一共有14x14x9个
