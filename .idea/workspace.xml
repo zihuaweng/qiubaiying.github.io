@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56181e8a-5d4b-4212-9532-6885ff10b056" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2018-04-04-loss.md" afterPath="$PROJECT_DIR$/_posts/2018-04-04-loss.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md" afterPath="$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/faster-rcnn-improve.md" afterPath="$PROJECT_DIR$/_posts/faster-rcnn-improve.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2018-04-06-faster-rcnn-scripts.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018-04-06-faster-rcnn-scripts.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -27,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faster-rcnn-improve.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="faster-rcnn-improve.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/faster-rcnn-improve.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -73,9 +72,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/faster-rcnn-improve.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-04-loss.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md" />
+        <option value="$PROJECT_DIR$/_posts/faster-rcnn-improve.md" />
       </list>
     </option>
   </component>
@@ -263,17 +262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/faster-rcnn-improve.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="189">
-            <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -284,6 +272,17 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="277">
             <caret line="460" column="0" lean-forward="true" selection-start-line="460" selection-start-column="0" selection-end-line="460" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/faster-rcnn-improve.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="189">
+            <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             <folding />
           </first_editor>
           <second_editor />
