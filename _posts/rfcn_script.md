@@ -59,8 +59,7 @@ R-FCN的实现也是分为approximate joint training（end2end），  alternativ
 ## R-FCN using RPN proposals, init from ImageNet model
 ![comparison](http://zihuaweng.github.io/post_images/rfcn/rfcn_train.png)
 
-打开模型的时候我是凌乱的，怎么论文写的这么简单，操作起来这有WTF的心声。。。
-
+打开模型的时候我是凌乱的，怎么论文写的这么简单，操作起来竟然这么复杂。。。
 
 
 
