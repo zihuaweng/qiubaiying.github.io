@@ -26,6 +26,10 @@ Gunicorn 就是这么一种WSGI的实现, 他也是个web server, 可以直接�
 
 下面讲一下gunicorn接一些参数设置：
 
+## workers
+
+ 一般设置是核的2-4倍。
+
 ## worker types:
 
 gunicorn有以下几种worker types:
@@ -83,5 +87,6 @@ web socket可以请求服务器由http升级为web socket，升级后，web sock
 1. https://www.spirulasystems.com/blog/2015/01/20/gunicorn-worker-types/
 2. https://www.zhihu.com/question/20215561
 3. 廖雪峰python教程
+4. http://docs.gunicorn.org/en/stable/index.html
 
 
