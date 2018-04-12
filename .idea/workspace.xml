@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56181e8a-5d4b-4212-9532-6885ff10b056" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md" afterPath="$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md" afterPath="$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-11-multi_thread_tensorflow.md" afterPath="$PROJECT_DIR$/_posts/multi_thread_tensorflow.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="10290">
+              <first_editor relative-caret-position="0">
                 <caret line="490" column="63" lean-forward="false" selection-start-line="490" selection-start-column="63" selection-end-line="490" selection-end-column="63" />
                 <folding />
               </first_editor>
@@ -29,12 +30,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-04-12-python_web_server.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018-04-12-python_web_server.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="307">
-                <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+              <first_editor relative-caret-position="189">
+                <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multi_thread_tensorflow.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/multi_thread_tensorflow.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="357">
+                <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -46,21 +60,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2018-04-04-loss.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-04-04-loss.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="210">
-                <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <first_editor relative-caret-position="21">
+                <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -100,14 +101,14 @@
         <option value="$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-09-rfcn_script.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-11-multi_thread_tensorflow.md.markdown" />
-        <option value="$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="394" />
+    <option name="x" value="82" />
+    <option name="y" value="339" />
     <option name="width" value="1855" />
     <option name="height" value="657" />
   </component>
@@ -179,10 +180,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="394" width="1855" height="657" extended-state="0" />
+    <frame x="82" y="339" width="1855" height="657" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14663073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20269541" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -286,11 +287,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-04-11-multi_thread_tensorflow.md">
+    <entry file="file://$PROJECT_DIR$/_posts/multi_thread_tensorflow.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="252">
             <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -349,11 +351,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-04-11-multi_thread_tensorflow.md">
+    <entry file="file://$PROJECT_DIR$/_posts/multi_thread_tensorflow.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="294">
             <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -570,17 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-04-04-loss.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-04-09-rfcn_script.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -592,16 +584,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-04-12-python.md" />
-    <entry file="file://$PROJECT_DIR$/_posts/2018-04-11-multi_thread_tensorflow.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/faster-rcnn-improve.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -620,8 +602,30 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="10290">
+          <first_editor relative-caret-position="0">
             <caret line="490" column="63" lean-forward="false" selection-start-line="490" selection-start-column="63" selection-end-line="490" selection-end-column="63" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-04-04-loss.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-04-09-padding.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -631,8 +635,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <first_editor relative-caret-position="21">
+            <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -642,8 +646,19 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="307">
-            <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+          <first_editor relative-caret-position="189">
+            <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/multi_thread_tensorflow.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="357">
+            <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
             <folding />
           </first_editor>
           <second_editor />

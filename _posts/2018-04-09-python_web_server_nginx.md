@@ -29,7 +29,7 @@ nginx是一个http的sever，客户端通过http传过来的请求，传入nginx
 
 nginx还有几个作用：
 
-- nginx可以做负载，监听一个端口，然后获得请求后分发给多个不同的客服（handler），均衡每个服务的请求处理亮。
+- nginx可以做负载，监听一个端口，然后获得请求后分发给多个不同的客服（handler），均衡每个服务的请求处理量。
 ![nginx](http://zihuaweng.github.io/post_images/python_web/nginx.png)
 
 - 另外主要的一个功能就是接收用户请求，从文件中读取HTML，返回有界面网页。
