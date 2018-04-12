@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56181e8a-5d4b-4212-9532-6885ff10b056" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md" afterPath="$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md" />
       <change beforePath="$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md" afterPath="$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,12 +29,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-04-12-python_web_server.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2018-04-12-python_web_server.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="189">
-                <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <first_editor relative-caret-position="307">
+                <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -44,12 +42,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-04-09-python_web_server_nginx.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018-04-09-python_web_server_nginx.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="294">
-                <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <first_editor relative-caret-position="105">
+                <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -102,14 +100,14 @@
         <option value="$PROJECT_DIR$/_posts/2018-04-06-faster-rcnn-scripts.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-09-rfcn_script.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-11-multi_thread_tensorflow.md.markdown" />
-        <option value="$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md" />
         <option value="$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="423" />
+    <option name="x" value="62" />
+    <option name="y" value="394" />
     <option name="width" value="1855" />
     <option name="height" value="657" />
   </component>
@@ -181,10 +179,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="423" width="1855" height="657" extended-state="0" />
+    <frame x="62" y="394" width="1855" height="657" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2161725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14663073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -630,22 +628,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="189">
-            <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <first_editor relative-caret-position="105">
+            <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-04-09-python_web_server_nginx.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2018-04-12-python_web_server.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="294">
-            <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <first_editor relative-caret-position="307">
+            <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
             <folding />
           </first_editor>
           <second_editor />

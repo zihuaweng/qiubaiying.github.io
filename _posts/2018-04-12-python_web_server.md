@@ -15,8 +15,10 @@ tags:
 gunicorn 是一个WSGI HTTP server
 
     Web Server <=====WSGI=====> Python APP
+
+客户端发送一个请求，nginx接收到请求后转发给我们的服务端，服务端需要接受HTTP请求、解析HTTP请求、发送HTTP响应，这些都是体力活，为了不写写些东西，我们需要一个统一的接口来处理这些东西，这就是WSGI。
     
-WSGI 其实是一种网关协议, 是Python应用程序或框架和Web服务器之间的一种接口, 用以把http请求参数转换为python服务可以读取的内容, 这样在python的框架里能根据请求参数进行不同的业务处理了
+WSGI 其实是一种网关协议, 是Python应用程序或框架和Web服务器之间的一种接口, 用以把http请求参数转换为python服务可以读取的内容, 这样在python的框架里能根据请求参数进行不同的业务处理了。
 
 Gunicorn 就是这么一种WSGI的实现, 他也是个web server, 可以直接提供对外的web服务, 但在一般的部署中, 他只是作为python服务的运行的容器, 运行和管理python应用程序
 
@@ -80,5 +82,6 @@ web socket可以请求服务器由http升级为web socket，升级后，web sock
 ## Reference
 1. https://www.spirulasystems.com/blog/2015/01/20/gunicorn-worker-types/
 2. https://www.zhihu.com/question/20215561
+3. 廖雪峰python教程
 
 
