@@ -9,8 +9,7 @@ catalog: true
 tags:
     - faster rcnn
     - caffe
-    - c++
-    - python
+    - 源码
 ---
 
 这篇博客主要想记录一下学习Ross Girshick大神的[py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn)源码的笔记，方便以后翻看。
