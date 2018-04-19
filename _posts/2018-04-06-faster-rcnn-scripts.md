@@ -484,6 +484,11 @@ void ROIPoolingLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
 3. rpn中，超出图片大小的anchor处理
     - 训练的时候，忽略超出图片大小的anchor，否则会造成很大的误差，并且很难拟合。测试的时候，生成的anchor如果有超出图片大小的会被裁剪掉。
 
+4. 为什么使用Smooth L1 loss
+    - 对输入 x ，输出 f(x) ，标签 Y ：L2 loss = |f(x) -Y|^{2} ，其导数为 2(f(x) -Y)f'(x)；
+    - L1 loss = |f(x) - Y| ，其导数为 f'(x) 
+    - 因此L1 loss对噪声（outliers）更鲁棒。
+
 3. 其他一些可能遇到的问题：
     - https://blog.csdn.net/u010402786/article/details/72675831?locationNum=11&fps=1
 
