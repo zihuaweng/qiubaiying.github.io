@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      gpu cpu差别（全）
+title:      gpu cpu差别(未完)
 subtitle:   从硬件上和软件上区别gpu,cpu
 date:       2018-04-15
 author:     zihuaweng
