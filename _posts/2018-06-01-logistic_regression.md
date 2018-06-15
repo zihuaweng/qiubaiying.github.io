@@ -30,7 +30,7 @@ tags:
 \\[ P(Y = 0) = 1 / (1 + exp(wx)) \\]
 返回去看为什么log(p/(1-p))是一个比较好的转换,下面是log(p/(1-p))的分布图. p取中间的概率的情况, log(p/(1-p))变化很平缓,而p越靠近0或者1,log(p/(1-p))越趋向于负无穷和正无穷.
 转化成上面两个式子,就是我们熟悉的sigmoid的解释: wx越大,概率越趋向与1,越小,概率越趋向于0. 而尽量中间情况wx取值很少. 这样才能构成一个更加准确的分类器.
-![lr_3](http://zihuaweng.github.io/post_images/lr/lr_3.png)
+![lr_4](http://zihuaweng.github.io/post_images/lr/lr_4.png)
 
 所以说,逻辑回归是利用线性回归学习因变量概率的问题的模型, 从而逻辑回归变成一个模型选择的问题,针对不同的线性模型,可以得到不同效果的分类
 ![lr_3](http://zihuaweng.github.io/post_images/lr/lr_3.png)
