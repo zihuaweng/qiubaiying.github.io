@@ -7,8 +7,8 @@ author:     zihuaweng
 header-img: img/post_header.jpg
 catalog: true
 tags:
-    - 图像识别
-    - Haar
+    - 机器视觉
+    - 人脸检测
     - 传统图像处理
 ---
 
@@ -99,6 +99,7 @@ https://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html
 
 
 ## Reference
+1. https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf
 1. https://www.superdatascience.com/opencv-face-detection/
 2. https://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html
 3. https://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html
