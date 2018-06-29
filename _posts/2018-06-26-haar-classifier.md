@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      人脸检测算法
+title:      人脸检测算法 -- Haar
 subtitle:   Haar Classifier解析
 date:       2018-06-26
 author:     zihuaweng
