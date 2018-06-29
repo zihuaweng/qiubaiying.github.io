@@ -16,10 +16,19 @@ tags:
 
 ## 研究文献
 
-### DAGER: Deep Age, Gender and Emotion Recognition Using Convolutional Neural Networks (2017)
+### DAGER: Deep Age, Gender and Emotion Recognition Using Convolutional Neural Networks (2017) (不推荐)
 作者提供了一个pipeline识别图片中人物年龄,性别和情绪. 使用了40,000个人的4,000,000张图片进行训练.
+全问文有点价值的可能是下面这张流程图...其他都在吹捧自家API(喷...)
+![lr_1](http://zihuaweng.github.io/post_images/emotion_detection/001.png)
 
-第二个模型是, CNN
+### Going Deeper in Facial Expression Recognition using Deep Neural Networks (2015)
+
+
+### Spatio-Temporal Facial Expression Recognition Using Convolutional Neural Networks and Conditional Random Fields (2017)
+这篇论文与上面是同一个作者.
+#### 模型: Residual connections 残差网络 + linear chain Conditional Random Fields (CRFs) (条件随机场)
+
+
 AU is one of 46 atomic elements of visible facial movement or its associated deformation;
 
 
