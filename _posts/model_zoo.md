@@ -61,6 +61,6 @@ tags:
 这个网络前半部分是一个卷积网络, 提取特征后编码成概率,
 
 
-
 1. http://www.asimovinstitute.org/neural-network-zoo/
+
 
