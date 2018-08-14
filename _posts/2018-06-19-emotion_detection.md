@@ -14,6 +14,12 @@ tags:
 
 最近做了一些情绪识别的调研工作, 最主要是做人脸2D图像的情绪识别, 不包括视频,3D,脑电图等的研究, 当然, 时效性什么的我们就不考虑了哈~~
 
+## 一些有用的网站
+
+1. [Adam Geitgey人脸识别](https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78)
+2. [High Quality Face Recognition with Deep Metric Learning](http://blog.dlib.net/2017/02/high-quality-face-recognition-with-deep.html)
+
+
 ## 研究文献
 
 ### DAGER: Deep Age, Gender and Emotion Recognition Using Convolutional Neural Networks (2017) (不推荐)

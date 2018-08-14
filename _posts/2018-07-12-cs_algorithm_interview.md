@@ -25,6 +25,9 @@ tags:
 4. [leetcode guide](https://www.reddit.com/r/cscareerquestions/comments/6luszf/a_leetcode_grinding_guide/)
 5. [cracking the coding interview](https://www.slideshare.net/gayle2/cracking-the-coding-interview-abbreviated-aug-2016/26)
 
+## other interesting
+
+1. [interview with Davis King , the author of dlib](https://www.pyimagesearch.com/2017/03/13/an-interview-with-davis-king-creator-of-the-dlib-toolkit/)
 
 ![comparison](http://zihuaweng.github.io/post_images/region_proposal/comparison.png)
 
